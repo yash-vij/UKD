@@ -1,0 +1,288 @@
+<div
+  style="
+    background-color: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
+  "
+>
+  <div class="container">
+    <div class="headerImage" style="margin-top: 20px">
+      <span class="imageRegistration"></span>
+    </div>
+    <div *ngIf="displayForm == false">
+      <p>
+        As per the Constitution of Uttarakhand Kranti Dal, any citizen of India
+        of the age of 18 years or above who subscribes to the objectives of the
+        Party shall be eligible to become a member of the Party, provided that
+        he or she:
+      </p>
+      <ul style="margin-top: 0px; margin-right: 10px">
+        <li>
+          Is not a member of any other political Party registered with the
+          Election Commission of India;
+        </li>
+        <li>
+          Is not a member of any organization whose views, policies or actions
+          are in conflict with the objectives of the Party; and/or
+        </li>
+        <li>
+          Has not been convicted of any offence involving moral turpitude;
+        </li>
+        <li>Is devoted for the betterment of state;</li>
+      </ul>
+      <div style="margin-bottom: 10px">
+        <button (click)="registerUs()">Register</button>
+      </div>
+    </div>
+    <div *ngIf="displayForm == true">
+      <div>
+        <h2>Register with us</h2>
+      </div>
+      <div class="registrationform">
+        <form
+          [formGroup]="FormData"
+          (ngSubmit)="processForm(FormData.value)"
+          autocomplete="off"
+        >
+          <div *ngIf="upload == false">
+            <div class="Name">
+              <input
+                type="text"
+                name="name"
+                [class.is-invalid]="fullName.invalid && fullName.touched"
+                class="form-control"
+                formControlName="name"
+                placeholder="Full Name *"
+                autocomplete="off"
+              />
+              <div *ngIf="fullName.invalid && fullName.touched">
+                <small *ngIf="fullName.errors?.required" class="text-danger"
+                  >Full Name is required</small
+                >
+                <small *ngIf="fullName.errors?.minlength" class="text-danger"
+                  >Full Name must be atleast 3 characters long</small
+                >
+              </div>
+            </div>
+            <div class="emailNum" style="display: flex">
+              <input
+                type="email"
+                name="email"
+                [class.is-invalid]="eMail.invalid && eMail.touched"
+                class="form-control"
+                placeholder="Email *"
+                formControlName="email"
+                autocomplete="off"
+              />
+              <div *ngIf="eMail.invalid && eMail.touched">
+                <small *ngIf="eMail.errors?.required" class="text-danger"
+                  >Email is required</small
+                >
+                <small *ngIf="eMail.errors?.email" class="text-danger"
+                  >Not a email address</small
+                >
+              </div>
+              <input
+                type="text"
+                name="phone"
+                class="form-control"
+                [class.is-invalid]="phoneNo.invalid && phoneNo.touched"
+                placeholder="Phone *"
+                formControlName="phone"
+                autocomplete="off"
+                maxlength="10"
+              />
+              <div *ngIf="phoneNo.invalid && phoneNo.touched">
+                <small *ngIf="phoneNo.errors?.required" class="text-danger"
+                  >Phone no is required</small
+                >
+                <small *ngIf="phoneNo.errors?.pattern" class="text-danger"
+                  >Should be 10 digits</small
+                >
+              </div>
+            </div>
+            <div class="Name">
+              <input
+                type="text"
+                name="address1"
+                class="form-control"
+                [class.is-invalid]="add1.invalid && add1.touched"
+                formControlName="address1"
+                placeholder="Address Line 1 *"
+                autocomplete="off"
+              />
+              <div *ngIf="add1.invalid && add1.touched">
+                <small *ngIf="add1.errors?.required" class="text-danger"
+                  >Address 1 is required</small
+                >
+              </div>
+            </div>
+            <div class="Name">
+              <input
+                type="text"
+                name="address2"
+                class="form-control"
+                formControlName="address2"
+                placeholder="Address Line 2"
+                autocomplete="off"
+              />
+            </div>
+            <div class="emailNum" style="display: flex">
+              <input
+                type="email"
+                name="district"
+                class="form-control"
+                placeholder="District *"
+                formControlName="district"
+                [class.is-invalid]="
+                  districtFunc.invalid && districtFunc.touched
+                "
+                autocomplete="off"
+              />
+              <div *ngIf="districtFunc.invalid && districtFunc.touched">
+                <small *ngIf="districtFunc.errors?.required" class="text-danger"
+                  >District is required</small
+                >
+              </div>
+              <input
+                type="text"
+                name="state"
+                class="form-control"
+                placeholder="State *"
+                formControlName="state"
+                [class.is-invalid]="stateFunc.invalid && stateFunc.touched"
+                autocomplete="off"
+              />
+
+              <div *ngIf="stateFunc.invalid && stateFunc.touched">
+                <small *ngIf="stateFunc.errors?.required" class="text-danger"
+                  >State is required</small
+                >
+              </div>
+            </div>
+            <div class="emailNum" style="display: flex">
+              <input
+                type="text"
+                name="aadhar"
+                class="form-control"
+                placeholder="Aadhar No. *"
+                formControlName="aadhar"
+                autocomplete="off"
+                maxlength="12"
+                [class.is-invalid]="aadharNo.invalid && aadharNo.touched"
+              />
+              <div *ngIf="aadharNo.invalid && aadharNo.touched">
+                <small *ngIf="aadharNo.errors?.required" class="text-danger"
+                  >Aadhar no is required</small
+                >
+                <small *ngIf="aadharNo.errors?.pattern" class="text-danger"
+                  >Should be 12 digits</small
+                >
+              </div>
+              <input
+                type="text"
+                name="pan"
+                class="form-control"
+                placeholder="Pan Card No."
+                formControlName="pan"
+                autocomplete="off"
+              />
+            </div>
+            <div style="margin-bottom: 10px">
+              <button [disabled]="FormData.invalid" (click)="uploadDoc()">
+                Next
+              </button>
+            </div>
+          </div>
+          <div *ngIf="upload == true">
+            <div class="emailNum" style="display: flex; margin-top: 10px">
+              <p
+                style="
+                  margin: 5px;
+                  margin-right: 10px;
+                  text-align: justify;
+                  font-family: system-ui;
+                  font-weight: bold;
+                  font-size: 20px;
+                "
+              >
+                Upload Id Proof:
+              </p>
+              <input
+                style="border: none; margin: 5px"
+                type="file"
+                accept="image/*"
+                name="photo"
+                formControlName="idProof"
+              />
+            </div>
+            <div class="emailNum" style="display: flex">
+              <p
+                style="
+                  margin: 5px;
+                  margin-right: 10px;
+                  text-align: justify;
+                  font-family: system-ui;
+                  font-weight: bold;
+                  font-size: 20px;
+                "
+              >
+                Upload Pic:
+              </p>
+              <input
+                style="border: none; margin: 5px"
+                type="file"
+                accept="image/*"
+                name="photo"
+                formControlName="photo"
+              />
+            </div>
+            <div class="checkbox">
+              <div class="inner-checkbox">
+                <input
+                  id="checkboxsize"
+                  type="checkbox"
+                  name="joiningFees"
+                  value="joiningFees"
+                  formControlName="joiningFees"
+                /><label for="joiningFees" id="checkboxlabel"
+                  >Joining Fees (Rs.10)</label
+                >
+              </div>
+              <div class="inner-checkbox">
+                <input
+                  id="checkboxsize"
+                  type="checkbox"
+                  name="Voluntary"
+                  [value]="contributeVoluntaryCheckbox"
+                  formControlName="contributeVoluntary"
+                  (change)="onVoluntaryChange($event)"
+                  [checked]="contributeVoluntaryCheckbox"
+                /><label for="Voluntary" id="checkboxlabel"
+                  >Voluntary Contribution</label
+                >
+              </div>
+              <div *ngIf="displayContributeVoluntary == true">
+                <input type="number" placeholder="Enter Amount" />
+              </div>
+              <div class="inner-checkbox">
+                <input
+                  id="checkboxsize"
+                  type="checkbox"
+                  name="tnc"
+                  value="tnc"
+                  formControlName="tnc"
+                /><label for="tnc" id="checkboxlabel">I accept T&C.</label>
+              </div>
+            </div>
+
+            <button type="submit" [disabled]="FormData.invalid">
+              Proceed To Pay
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

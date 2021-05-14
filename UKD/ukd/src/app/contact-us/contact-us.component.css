@@ -1,0 +1,102 @@
+.contactTitle p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-family: cursive;
+  color: rgb(56, 56, 56);
+  margin-top: 75px;
+}
+.container {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.reachUs p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(56, 56, 56);
+  margin: 0px;
+}
+.address p {
+  text-align: center;
+}
+.address a:hover {
+  font-weight: bold;
+}
+.messageForm {
+  margin-top: 50px;
+}
+button {
+  background-color: #e00000;
+  padding-top: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+button:hover {
+  background-color: #f44336;
+}
+button:disabled,
+button[disabled] {
+  background-color: #ff5252;
+}
+button:active {
+  background-color: #e00000;
+}
+section {
+  text-align: center;
+}
+textarea {
+  width: 100%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+.contact-email {
+  margin-left: 45%;
+}
+.emailNum input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 9px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #999;
+  background-color: #fafafa;
+}
+.emailNum {
+  display: flex;
+  justify-content: space-between;
+}
+.Name input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 9px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #999;
+  margin-top: 20px;
+  background-color: #fafafa;
+}
+textarea:hover,
+.emailNum input:hover,
+.Name input:hover {
+  background-color: #eeeeee;
+}

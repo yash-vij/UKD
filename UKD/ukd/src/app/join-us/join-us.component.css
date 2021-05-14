@@ -1,0 +1,123 @@
+.container {
+  display: block;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 5%;
+  align-self: center;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 4px 3px 5px 5px #ffebee;
+  transition: 0.3s;
+}
+.container:hover {
+  box-shadow: 4px 6px 10px 10px #ffebee;
+}
+.imageRegistration {
+  background: url(../../assets/registrationHeader.png) no-repeat;
+  height: 90px;
+  display: block;
+  width: 100%;
+  background-color: white;
+}
+.registrationform {
+  display: block;
+  background: white;
+  margin-bottom: 20px;
+}
+.container h2 {
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(0 86 31);
+}
+.registrationform input {
+  border: none;
+  padding: 0;
+  height: 40px;
+  border-bottom: 1px solid rgb(0 86 31);
+  margin: 5px;
+  width: 98%;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+  font-size: 20px;
+}
+.registrationform input:focus {
+  border: none;
+  border-style: none;
+  border-bottom: 2px solid rgb(0 86 31);
+  border-radius: 0px;
+}
+.registrationform .emailNum input {
+  width: 50%;
+}
+.registrationform button {
+  border-radius: 5px;
+  font-family: Arial;
+  background-color: rgb(0 86 31);
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0px 35%;
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 2px #81c784;
+  width: 30%;
+  color: white;
+}
+.container p {
+  margin: 10px;
+  text-align: justify;
+  font-family: cursive;
+}
+.container ul li {
+  text-align: justify;
+  font-family: cursive;
+}
+button {
+  border-radius: 5px;
+  font-family: Arial;
+  background-color: rgb(0 86 31);
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0px 35%;
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 2px #81c784;
+  width: 30%;
+  color: white;
+}
+#checkboxsize {
+  width: 20px;
+}
+.checkbox {
+  width: 100%;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+#checkboxlabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+.inner-checkbox {
+  display: flex;
+  align-items: flex-end;
+}
+.inner-checkbox label {
+  margin-left: 10px;
+}

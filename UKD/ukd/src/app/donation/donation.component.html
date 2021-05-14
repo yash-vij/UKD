@@ -1,0 +1,186 @@
+<div
+  class="background"
+  style="
+    min-height: 700px;
+    background-image: url(../../assets/carousel/1.jpg) no-repeat;
+  "
+>
+  <div class="outer">
+    <div class="donate-outer" style="padding: 50px">
+      <form
+        [formGroup]="FormData"
+        (ngSubmit)="
+          showDetail === false
+            ? processFormData(FormData.value.donate)
+            : processFormData(FormData.value)
+        "
+        class="form border rounded bg-light shadow text-dark py-4"
+      >
+        <div style="margin-bottom: 20px">
+          <span class="amountError" *ngIf="showAmountError"
+            >Amount is at least ₹9 for one time and ₹100 for monthly. No
+            decimals</span
+          ><br />
+          <span class="amount-txt text-right">Donate ₹ </span>
+          <input
+            maxlength="7"
+            class="form-control form-inline amount text-center"
+            type="text"
+            [value]="donate"
+            formControlName="donate"
+            [(ngModel)]="donate"
+            (change)="onAmountChange($event)"
+            style="width: 80%; margin-left: 10%"
+          /><br />
+          <div class="col-12 text-center">
+            <div class="form-check-inline">
+              <button
+                [ngClass]="{ active: selectedAmount == amount }"
+                *ngFor="let amount of amounts"
+                type="button"
+                class="btn btn-default btn-amount"
+                (click)="amountSelected(amount)"
+              >
+                ₹{{ amount }}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <div class="col-12 text-center">
+            <div class="known-Donate">
+              <div class="col-md-12 declaration form-check">
+                <div
+                  class="known-check"
+                  style="
+                    margin-bottom: 20px;
+                    text-align: center;
+                    align-items: baseline;
+                    display: block;
+                  "
+                >
+                  <input
+                    class="form-check-input"
+                    name="contactme"
+                    type="checkbox"
+                    value="Yes"
+                    (change)="onCheckboxChange($event)"
+                  />
+                  <label for="contactme" class="consent" id="contactme-label"
+                    >Donate Anonymously</label
+                  >
+                </div>
+                <div id="page-1" class="details-hide" *ngIf="showDetail">
+                  <div class="col-12">
+                    <label class="form-group has-float-label">
+                      <select
+                        (change)="onCountryChange($event)"
+                        class="form-control custom-select"
+                        name="country"
+                        formControlName="country"
+                        title="Choose where you live"
+                      >
+                        <option
+                          *ngFor="let countrys of countries"
+                          [value]="countrys"
+                        >
+                          {{ countrys }}
+                        </option>
+                      </select>
+                      <span>Where do you live</span>
+                    </label>
+                  </div>
+                  <div class="col-12">
+                    <p class="error-message collapse" id="name-error">
+                      <b>Personal</b> name with at least 5 characters, only
+                      alphabets
+                    </p>
+                    <label class="form-group has-float-label">
+                      <input
+                        class="form-control"
+                        title="Your name is required, 64 characters max"
+                        maxlength="50"
+                        formControlName="name"
+                        type="text"
+                      />
+                      <span
+                        >Your Full Name<span class="collapse">
+                          as in passport</span
+                        ></span
+                      >
+                    </label>
+                  </div>
+                  <div class="col-md-12">
+                    <p class="error-message collapse" id="mobile-error">
+                      This is not a valid mobile for __COUNTRY__
+                    </p>
+                    <label class="form-group has-float-label">
+                      <input
+                        type="text"
+                        title="A valid mobile number for the chosen country is required"
+                        class="form-control"
+                        maxlength="18"
+                        formControlName="phone"
+                      />
+                      <span>Your Mobile</span>
+                    </label>
+                  </div>
+                  <div class="col-md-12">
+                    <p class="error-message collapse" id="email-error">
+                      This is not a valid email format.
+                    </p>
+                    <label class="form-group has-float-label">
+                      <input
+                        title="A valid email is required"
+                        class="form-control"
+                        maxlength="48"
+                        formControlName="email"
+                        type="email"
+                      />
+                      <span>Your Email</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 text-center">
+          <button
+            type="submit"
+            [disabled]="
+              showDetail == false
+                ? donate == ''
+                  ? true
+                  : false
+                : !FormData.valid
+                ? true
+                : false
+            "
+            class="btn btn-warning btn-action my-3"
+          >
+            Proceed
+          </button>
+        </div>
+        <div class="col-12 form-group text-center">
+          <div class="amount-txt text-center">
+            <p
+              class="hint-message hm-extra"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title=""
+              data-original-title="Donations to AAP, except those in cash, are exempt under Income Tax Act 1961, u/s 80GGB/80GGC."
+            >
+              Donations are tax exempt under u/s 80GGB/80GGC
+              <i
+                class="fa fa-info-circle info-icon"
+                style="font-size: 1rem"
+              ></i>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+<section>
+  <div class="contactTitle">
+    <p>CONTACT</p>
+  </div>
+  <div class="reachUs">
+    <p>Reach Us Anytime</p>
+  </div>
+  <div class="address">
+    <p style="color: #848484; font-family: serif; font-size: 18px">
+      For press, general inquiries and raise issues as a concerned citizen,
+      contact our office today:
+    </p>
+    <p
+      style="
+        color: #848484;
+        font-family: serif;
+        font-size: 18px;
+        margin-bottom: 0px;
+      "
+    >
+      Kranti Bhawan, 10 Court Road, Dehradun,<br />
+      Uttarakhand, India 248001
+    </p>
+    <div class="contact-email">
+      <a
+        href="tel:+918273887999"
+        style="
+          width: 150px;
+
+          display: block;
+          color: #848484;
+          font-family: serif;
+          font-size: 18px;
+          margin-top: 5px;
+          margin-bottom: 0px;
+          text-decoration: none;
+        "
+        >+91-8273-88-7999</a
+      >
+      <a
+        style="
+          width: 150px;
+          display: block;
+          color: #848484;
+          font-family: serif;
+          font-size: 18px;
+          margin-top: 5px;
+          text-decoration: underline;
+        "
+        href="mailto:office@ukd.org.in"
+        >office@ukd.org.in</a
+      >
+    </div>
+  </div>
+  <div class="messageForm">
+    <h2
+      style="
+        color: #424242;
+        margin-top: 80px;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 18px;
+        letter-spacing: 6px;
+        font-family: sans-serif;
+      "
+    >
+      GET IN TOUCH
+    </h2>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <form [formGroup]="FormData" (ngSubmit)="processForm(FormData.value)">
+      <div class="Name">
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          formControlName="name"
+          placeholder="Full Name"
+          autocomplete="off"
+        />
+      </div>
+      <div class="emailNum">
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          placeholder="Email"
+          formControlName="email"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          name="phone"
+          class="form-control"
+          placeholder="Phone"
+          formControlName="phone"
+          autocomplete="off"
+        />
+      </div>
+      <div class="field">
+        <textarea
+          rows="5"
+          cols="105"
+          class="form-control"
+          name="message"
+          placeholder="Message"
+          formControlName="message"
+          autocomplete="off"
+        ></textarea>
+      </div>
+      <div *ngIf="showSent" style="color: rgb(0 86 31)">
+        Successfully Sent!!
+      </div>
+      <button type="submit" [disabled]="!FormData.valid">Submit</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,198 @@
+<div>
+  <div class="upperPart">
+    <div class="carouselPart">
+      <ngb-carousel
+        #carousel
+        [interval]="2000"
+        [pauseOnHover]="pauseOnHover"
+        [pauseOnFocus]="pauseOnFocus"
+        (slide)="onSlide($event)"
+      >
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+          <div class="picsum-img-wrapper">
+            <img [src]="img" />
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="redPart">
+      <div class="redMainBlock">
+        <div class="textArea">
+          <p>FOR A BETTER UTTARAKHAND</p>
+        </div>
+        <div class="symbol">
+          <img src="./assets/symbol.png" />
+        </div>
+        <div class="textAreaFont">
+          <p>Let's move Uttarakhand forward.</p>
+          <p>Yes we can! For the people!</p>
+          <p>By the people! With the people !</p>
+        </div>
+        <div class="innerContentSocial">
+          <div class="socialIcons">
+            <img src="../assets/fb.png" (click)="clickedImg('facebook')" />
+            <img src="../assets/twitter.png" (click)="clickedImg('twitter')" />
+            <img src="../assets/insta.png" (click)="clickedImg('insta')" />
+            <img src="../assets/youtube.png" (click)="clickedImg('youtube')" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="outer-president-carousel">
+    <h3>PARTY PRESIDENTS</h3>
+    <div class="president-carousel">
+      <carousel
+        [height]="300"
+        [cellWidth]="300"
+        [images]="images2"
+        [loop]="true"
+        [autoplayInterval]="3000"
+        [autoplay]="true"
+      >
+      </carousel>
+    </div>
+  </div>
+  <div class="onBoard">
+    <div class="textArea">
+      <p style="color: black">GET ON BOARD</p>
+    </div>
+    <div>
+      <p
+        style="
+          color: black;
+          font-size: 50px;
+          text-align: center;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+            sans-serif;
+        "
+      >
+        Join our mission for a better uttarakhand
+      </p>
+    </div>
+    <div class="onBoardSymbol">
+      <div><img src="../../assets/onboardsymbol/donate.png" /></div>
+      <div><img src="../../assets/onboardsymbol/join.png" /></div>
+      <div><img src="../../assets/onboardsymbol/volunteer.png" /></div>
+    </div>
+    <div class="onBoardButtons">
+      <div>
+        <button
+          (click)="navigateDonateSection()"
+          id="donateButton"
+          type="submit"
+        >
+          DONATE
+        </button>
+      </div>
+
+      <div>
+        <button (click)="navigateJoin()" id="joinButton" type="submit">
+          JOIN
+        </button>
+      </div>
+
+      <div>
+        <button
+          (click)="navigateVolunteer()"
+          id="volunteerButton"
+          type="submit"
+        >
+          VOLUNTEER
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="collarge">
+    <div class="collarge-text">
+      <br />
+
+      <h1>WHY CHOOSE US ?</h1>
+      <br />
+      <p>
+        जल, जंगल, जमीन। उत्तराखंड मूवमेंट, एक ऐसा कदम जो राज्य को बनने और
+        पहाड़ों को बचाने के लिए उठाया गया था, जिसमें काफी विरो ने शहदते दी और
+        निरंतर संघर्ष के बाद हमें उत्तराखंड राज्य की प्राप्ति हुई। सन 1979 में
+        उत्तराखंड क्रांति दल की स्थापना हुई थी और तभी से उत्तराखंड क्रांति दल
+        पहाड़ों की सेवा के लिए निरंतर प्रयास करता है। 27 जुलाई 2000 को उत्तराखंड
+        मूवमेंट ने एक नया मोड़ लिए था। विगत वर्षो के संघर्ष के बाद जिसमें खटीमा
+        गोली कांड, मसरी गोली कांड, रामपुर मुज्जफरनगर गोली कांड, देहरादून,
+        कोटद्वार, श्रीनगर और नैनीताल गोली कांड मुख्य रूप से शामिल है, आज के दिन
+        उत्तरांचल बिल अर्थात् उत्तरप्रदेश पुनर्निर्माण बिल भारत सरकार द्वारा
+        संसद में पेश हुए था, जो की 1 अगस्त 2000 को लोक सभा में पास हुआ और 10
+        अगस्त 2000 को राज्य सभा में पास हुआ। राष्ट्रपति श्री के० अर० नारायण की
+        मंजूरी इसे 28 अगस्त 2000 को मिली, जिसके बाद 9 नवंबर 2000 में हमारी
+        देवभूमि उत्तराखंड की स्थापना हुई। उत्तराखंड क्रांति दल ने काफी संघर्ष के
+        बाद इस प्रदेश को बनाया है। वीर क्रांतिकारियों कि मेहनत का नतीजा है ये
+        राज्य। आज राज्य की स्तिथि पे नज़र डाले, तो हर तरफ लूट, रिश्वत का बोल
+        बाला है। जंगल तबाह हो गए है, सड़कों में सड़क से ज्यादा गड्ढे है, ठेकेदार
+        एक सड़क बनाकर उसकी मरम्मत करके अपनी ज़िन्दगी भर का खर्चा निकाल लेते है,
+        अस्पतालों में डॉक्टर की कमी का खामियाजा हमारी बेचारी जनता, माताएं और
+        बहनें भुगत्ती है, बिजली और पानी का आकाल है पहाड़ों में, शिक्षा के
+        क्षेत्र में देखा जाए तो हमारी शिक्षा व्यवस्था बदहाल है, शिक्षक का कार्य
+        होता है शिक्षा देना ताकि आने वाली पीढ़ी पे ज्ञान का भंडार हो लेकिन
+        उन्हें दूसरे कार्यों में व्यस्त कर दिया जाता है। पलायन चरम पर है, हमारी
+        देव भूमि विकास की जगह विनाश की ओर अग्रसर है। क्या इसी दिन के लिए हमारे
+        वीर सपूत शहीद हुए थे? क्या इसी दृश्य को देखने के लिए हमने संघर्ष किया
+        था? पहाड़ का पानी और पहाड़ की जवानी कभी पहाड़ के काम नी अयी। आइए आप और
+        हम मिलकर संघर्ष करे, ताकि इस राज्य को नई दिशा मिले, और प्रगति की ओर
+        अग्रसर हो। उत्तराखंड क्रांति दल के साथ कदम से कदम बढ़ाए, ताकि हम पहाड़ों
+        को बचा सके, अपने उत्तराखंड को बचा सके।
+      </p>
+    </div>
+  </div>
+  <div class="ribbon">
+    <img src="../../assets/ribbon2.png" />
+  </div>
+  <div class="social">
+    <div class="facebookpage">
+      <p class="social-head">Facebook Updates</p>
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fukd4uttarakhand&tabs=timeline&width=350&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        width="350"
+        height="550"
+        style="border: none; overflow: hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+    </div>
+    <div>
+      <p class="social-head">Twitter Updates</p>
+      <a
+        class="twitter-timeline"
+        data-width="350"
+        data-height="550"
+        href="https://twitter.com/harishpathakukd?ref_src=twsrc%5Etfw"
+      >
+        Tweets by harishpathakukd</a
+      >
+    </div>
+    <div>
+      <p class="social-head">Youtube Updates</p>
+      <div>
+        <iframe
+          width="350"
+          height="225"
+          src="https://www.youtube.com/embed/YN_b2wTv_NU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div>
+        <iframe
+          width="350"
+          height="225"
+          src="https://www.youtube.com/embed/WdYjkkdTiBI?start=63"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>

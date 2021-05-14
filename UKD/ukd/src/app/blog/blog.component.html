@@ -1,0 +1,44 @@
+<div class="blog">
+  <h1 class="blogheading">Blog @ UKD</h1>
+  <div class="blog-content">
+    <div>
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUKD4Uttarakhand%2F&tabs=timeline%2Cevents%2Cmessages&width=400px&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+        width="400px"
+        height="500"
+        style="border: none; overflow: hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      >
+      </iframe>
+    </div>
+    <div>
+      <a
+        class="twitter-timeline"
+        data-width="400"
+        data-height="500"
+        href="https://twitter.com/harishpathakukd?ref_src=twsrc%5Etfw"
+      >
+        Tweets by harishpathakukd</a
+      >
+    </div>
+  </div>
+  <div class="blog-content">
+    <div>
+      <div id="instafeed-container"></div>
+
+      <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+      <script type="text/javascript">
+        var userFeed = new Instafeed({
+          get: "user",
+          target: "instafeed-container",
+          resolution: "low_resolution",
+          accessToken: "YOUR_INSTAGRAM_ACCESS_TOKEN_GOES_HERE",
+        });
+        userFeed.run();
+      </script>
+    </div>
+  </div>
+</div>

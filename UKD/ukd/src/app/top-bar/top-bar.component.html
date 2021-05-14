@@ -1,0 +1,46 @@
+<div class="topmain" style="background-color: #0b610b">
+  <div class="details">
+    <span class="logo"></span>
+    <h3>Uttarakhand Kranti Dal - UKD</h3>
+  </div>
+  <div class="menu">
+    <div class="navigations" (click)="navigateHome()">Home</div>
+    <div class="navigations">
+      About
+      <div class="dropdown-content">
+        <a [routerLink]="'ideology'">Ideology</a>
+        <a [routerLink]="'vision'">Vision</a>
+        <a [routerLink]="'constitution'">Constitution</a>
+        <a [routerLink]="'founders'">Founders</a>
+        <a [routerLink]="'manifesto'">Manifesto</a>
+      </div>
+    </div>
+    <div class="navigations">
+      Media
+      <div class="dropdown-content-media">
+        <a [routerLink]="'pressReleases'">Press Releases</a>
+        <a [routerLink]="'news'">News</a>
+        <a [routerLink]="'programs'">Programs</a>
+        <a [routerLink]="'gallery'">Gallery</a>
+        <a [routerLink]="'blog'">Blog</a>
+      </div>
+    </div>
+    <div class="navigations">
+      Organization
+      <div class="dropdown-content-org">
+        <a [routerLink]="'leaders'">Leaders</a>
+        <a [routerLink]="'structure'">Structure</a>
+        <a [routerLink]="'history'">History</a>
+        <a [routerLink]="'officebearers'">Office Bearers</a>
+        <a [routerLink]="'mission'">Mission</a>
+        <a [routerLink]="'janAndolan'">Jan Andolan</a>
+      </div>
+    </div>
+    <div class="navigations" (click)="navigateVolunteer()">Volunteer</div>
+    <div class="navigations" [routerLink]="'contact'">Contact Us</div>
+  </div>
+  <div class="buttons">
+    <div class="btnjoin" ><a (click)="navigateJoin()">Join UKD</a></div>
+    <div class="btndonate"><a (click)="navigateDonateSection()">Donate</a></div>
+  </div>
+</div>

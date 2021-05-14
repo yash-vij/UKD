@@ -1,0 +1,31 @@
+<!-- <div class="leader-main">
+  <div class="leader-head"><h1>OUR BELOVED LEADERS</h1></div>
+  <div class="outer-cards">
+    <div class="cards" *ngFor="let img of leadersImage">
+      <div class="image">
+        <img src="../../assets/leaders/{{ img }}.jpg" />
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="leader-main">
+  <div class="leader-head"><h1>OUR BELOVED LEADERS</h1></div>
+  <div class="outer-cards">
+    <div class="container-fluid contenedor text-center">
+      <div class="cards">
+        <div class="container text-center" *ngFor="let img of leadersImage">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto">
+            <div class="ver_mas text-center">
+              <span class="lnr lnr-eye"></span>
+            </div>
+            <article class="text-left" style="text-align: center">
+              <h2>{{ leadersNames[img - 1] }}</h2>
+            </article>
+
+            <img src="../../assets/leaders/{{ img }}.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

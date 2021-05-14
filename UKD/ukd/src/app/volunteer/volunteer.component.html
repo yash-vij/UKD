@@ -1,0 +1,161 @@
+<div class="volunteer">
+  <section>
+    <div class="getInvolved">
+      <p>GET INVOLVED</p>
+    </div>
+    <div class="reachUs">
+      <p>Join Our Mission, Sign Up Now</p>
+    </div>
+  </section>
+  <section>
+    <form [formGroup]="FormData" (ngSubmit)="processForm(FormData.value)">
+      <div class="container">
+        <div class="block">
+          <br />
+          <br />
+          <div class="ways"><p>WAYS TO HELP</p></div>
+          <div class="tell">
+            <p>Tell us how you’d like to get involved, a member of our</p>
+            <p class="tell">team will get in touch soon</p>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="l1" value="knockondoors" /><label
+              for="l1"
+              >Knock on Doors</label
+            >
+            <input type="checkbox" name="l2" value="makecalls" /><label for="l2"
+              >Make Calls</label
+            >
+            <input type="checkbox" name="l3" value="socialmediablitz" /><label
+              for="l3"
+              >Social Media Blitz</label
+            >
+            <input type="checkbox" name="l4" value="hostfundraiser" /><label
+              for="l4"
+              >Host Fundraiser</label
+            >
+            <input type="checkbox" name="l5" value="hostfundraiser" /><label
+              for="l4"
+              >Internship</label
+            >
+          </div>
+        </div>
+        <div class="formMain">
+          <div class="nameandzip">
+            <input
+              type="text"
+              id="name"
+              placeholder="FullName"
+              class="form-control"
+              formControlName="name"
+              autocomplete="off"
+              name="name"
+            />
+            <input
+              type="number"
+              id="zip"
+              placeholder="ZIP Code"
+              class="form-control"
+              formControlName="zipCode"
+              name="zipCode"
+              autocomplete="off"
+            />
+          </div>
+          <div class="emailandphone">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+              name="email"
+              formControlName="email"
+              autocomplete="off"
+            />
+            <input
+              type="number"
+              id="phone"
+              placeholder="Phone"
+              class="form-control"
+              formControlName="phone"
+              name="phone"
+              autocomplete="off"
+            />
+          </div>
+          <div class="textareaandbutton">
+            <textarea
+              rows="1"
+              id="textarea"
+              cols="35"
+              placeholder="Type your message here"
+              class="form-control"
+              formControlName="message"
+              name="message"
+            >
+            </textarea>
+            <button type="submit" class="button">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="support-cause">
+          <div class="support-cause-text">
+            <p>START CHANGING</p>
+
+            <h1>Support Our Cause</h1>
+          </div>
+
+          <div class="onBoardButtons">
+            <div>
+              <button
+                (click)="navigateDonateSection()"
+                id="donateButton"
+                type="submit"
+              >
+                DONATE
+              </button>
+            </div>
+            <div>
+              <div>
+                <button (click)="navigateJoin()" id="joinButton" type="submit">
+                  JOIN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-subscribe">
+          <div class="bottomText">
+            <div class="image"></div>
+            <br />
+            <br />
+
+            <div class="subscribe"><p>SUBSCRIBE TO OUR NEWSLETTER</p></div>
+            <div class="update">
+              <p>Get the latest updates from the campaign trail</p>
+            </div>
+            <form
+              [formGroup]="SubscribeForm"
+              (ngSubmit)="processSubscribeFrom(SubscribeForm.value)"
+            >
+              <div class="sub">
+                <div class="subInput">
+                  <input
+                    type="email"
+                    class="formControl"
+                    id="sub-email"
+                    name="emailsubscribe"
+                    formControlName="emailsubscribe"
+                    placeholder="Enter your email here"
+                  />
+                  <button class="subButton" [disabled]="!SubscribeForm.valid">
+                    SUBSCRIBE
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>

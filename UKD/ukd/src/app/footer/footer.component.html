@@ -1,0 +1,91 @@
+<div class="footer">
+  <div class="footerContents">
+    <div class="outerTableOfContents">
+      <div style="margin-top: 10%">
+        <p
+          style="
+            margin-left: 5px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: bold;
+          "
+        >
+          Site Navigator:
+        </p>
+      </div>
+      <div class="tableOfContents">
+        <div>
+          <a [routerLink]="['/']"><p>Home</p></a>
+          <a [routerLink]="['vision']"><p>Vision</p></a>
+          <a [routerLink]="['volunteer']"><p>Volunteer</p></a>
+          <a [routerLink]="['leaders']"><p>Leaders</p></a>
+          <a [routerLink]="['programs']"><p>Programs</p></a>
+        </div>
+        <div>
+          <a [routerLink]="['constitution']"><p>Constitution</p></a>
+          <a [routerLink]="['ideology']"><p>Ideology</p></a>
+          <a [routerLink]="['founders']"><p>Founders</p></a>
+          <a [routerLink]="['blog']"><p>Blog</p></a>
+          <a [routerLink]="['manifesto']"><p>Manifesto</p></a>
+        </div>
+        <div>
+          <a [routerLink]="['structure']"><p>Organisation-Structure</p></a>
+          <a [routerLink]="['history']"><p>History</p></a>
+          <a [routerLink]="['officebearers']"><p>Office bearers</p></a>
+          <a [routerLink]="['janAndolan']"><p>Jan Andolan(Sangarsh)</p></a>
+          <a [routerLink]="['contact']"><p>Message-us</p></a>
+        </div>
+        <div>
+          <a [routerLink]="['mission']"><p>Mission</p></a>
+          <a [routerLink]="['news']"><p>News</p></a>
+          <a [routerLink]="['pressReleases']"><p>Press Releases</p></a>
+          <a [routerLink]="['gallery']"><p>Gallery</p></a>
+          <a [routerLink]="['joinUkd']"><p>Join-us</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="connectSocial">
+      <div style="margin-top: 10px; font-weight: bold">Uttarakhand Kranti Dal</div>
+      <div class="symbol" style="margin-top: 20px;margin-bottom: 20px;">
+        <img src="../assets/symbol.png" />
+      </div>
+      <div class="innerContentSocial">
+        <div>Connect with us:</div>
+        <div class="socialIcons">
+          <img src="../assets/fb.png" (click)="clickedImg('facebook')" />
+          <img src="../assets/twitter.png" (click)="clickedImg('twitter')" />
+          <img src="../assets/insta.png" (click)="clickedImg('insta')" />
+          <img src="../assets/youtube.png" (click)="clickedImg('youtube')" />
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div><p>Contact us:</p></div>
+      <div class="innerContactContent">
+        <div class="address">
+          <div><img src="../assets/location.png" /></div>
+          <div class="addressinner" style="display: flex;">
+            <div><p>Office address:</p></div>
+            <div style="margin-left: 6px;">
+              <p>Kranti Bhawan, 10 Court Road</p>
+              <p>Dehradun, Uttarakhand 248001</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: ruby-base; margin-top: 5px;">
+          <img src="../assets/mail.png" />
+          <a href="mailto:office@ukd.org.in" style="width: 170px"
+          >Mail: office@ukd.org.in</a>
+        </div>
+        <div style="display: ruby-base; margin-top: 5px;">
+          <img src="../assets/phone.png" />
+          <a href="tel:+918273887999" style="width: 135px"
+          >+91-8273-88-7999</a>
+        </div>
+      </div>
+      <div class="translator">
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.blog {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  align-content: center;
+}
+.blog-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.blogheading {
+  font: bold;
+  font-size: 50px;
+  font-family: serif;
+  text-align: center;
+}

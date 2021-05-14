@@ -1,0 +1,6 @@
+{
+  "/data": {
+    "target": "https://api.apispreadsheets.com",
+    "secure": false
+  }
+}
